@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Scenelogic">
+      <UniqueIdentifier>{4c2736fc-4016-4f7c-90ff-cf96be839041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneObject">
+      <UniqueIdentifier>{5f4e542f-0878-4371-b9fd-ea2b921e1e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Proto">
+      <UniqueIdentifier>{c6b463a4-bbfd-4a98-96c1-6c3b427b8898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StaticData">
+      <UniqueIdentifier>{0e358b5d-7aad-44d3-ae3b-39bf152f4c06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\SceneLogic_None.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\SceneLogic_Base.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\SceneLogic_Normal.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\SceneObject.cpp">
+      <Filter>SceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterCreator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\SceneLogic_City.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneXmlMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Move.pb.cc">
+      <Filter>Proto</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\SceneLogic_Arena.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Copy.pb.cc">
+      <Filter>Proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Game.pb.cc">
+      <Filter>Proto</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\BuffObject.cpp">
+      <Filter>SceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\BulletObject.cpp">
+      <Filter>SceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\SkillObject.cpp">
+      <Filter>SceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\MapObject.cpp">
+      <Filter>SceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GridManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\StaticData\StaticData.cpp">
+      <Filter>StaticData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\StaticData\CppSQLite3.cpp">
+      <Filter>StaticData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_LoginCltData.pb.cc">
+      <Filter>Proto</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\SceneLogic_Team.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogic\WinCondition.cpp">
+      <Filter>Scenelogic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WatcherClient\WatcherClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Base.pb.cc">
+      <Filter>Proto</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\SceneLogic_None.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\SceneLogic_Normal.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\SceneObject.h">
+      <Filter>SceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterCreator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\SceneLogic_City.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneXmlMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Message\Msg_Move.pb.h">
+      <Filter>Proto</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\SceneLogic_Arena.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Message\Msg_Copy.pb.h">
+      <Filter>Proto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Message\Msg_Game.pb.h">
+      <Filter>Proto</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\BuffObject.h">
+      <Filter>SceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Message\Game_Define.pb.h">
+      <Filter>Proto</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\SkillObject.h">
+      <Filter>SceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\BulletObject.h">
+      <Filter>SceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\StaticData\CppSQLite3.h">
+      <Filter>StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\MapObject.h">
+      <Filter>SceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GridManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\StaticData\SkillStruct.h">
+      <Filter>StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\StaticData\StaticData.h">
+      <Filter>StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\StaticData\StaticStruct.h">
+      <Filter>StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\StaticData\ConfigDefine.h">
+      <Filter>StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Message\Msg_LoginCltData.pb.h">
+      <Filter>Proto</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\SceneLogic_Team.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\WinCondition.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogic\SceneLogic_Base.h">
+      <Filter>Scenelogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WatcherClient\WatcherClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Message\Msg_Base.pb.h">
+      <Filter>Proto</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

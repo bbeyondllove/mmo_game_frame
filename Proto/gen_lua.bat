@@ -1,0 +1,1 @@
+for /r .\proto_raw %%a in (*.proto) do .\proto_tool\protoc.exe -I./proto_raw/ --descriptor_set_out ./protoc-gen-lua/%%~na.pb ./proto_raw/%%~na.proto

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1EB19A2A-049A-45AD-A592-E94703018D85}</ProjectGuid>
+    <RootNamespace>WorldServer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../Bin/Debug64/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../Bin/Release64/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ServerEngine;..\PublicData;..\..\Common;..\..\Common\protobuf\src;../../Common/MySql;..\..\Common\Sqlite;../../Common/Lua;../../Common/toluapp;..\ServerData;..\StaticData;..\WatcherClient;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4800;</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\Bin\Debug64;..\..\Common\Lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies> libprotobufd.lib;libmysql.lib;ServerEngine_d.lib;Sqlite3.lib;lua.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\ServerEngine;..\PublicData;..\..\Common;..\..\Common\protobuf\src;../../Common/MySql;..\..\Common\Sqlite;../../Common/Lua;../../Common/toluapp;..\ServerData;..\StaticData;..\WatcherClient;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4800;</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\Bin\Release64;..\..\Common\Lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies> libprotobuf.lib;libmysql.lib;ServerEngine.lib;Sqlite3.lib;lua.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Message\Msg_Account.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Base.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Payment.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Role.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\StaticData\StaticData.cpp" />
+    <ClCompile Include="..\StaticData\CppSQLite3.cpp" />
+    <ClCompile Include="..\Message\Game_Define.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Copy.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_Game.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_ID.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_LoginCltData.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_LoginDBData.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Message\Msg_RetCode.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\WatcherClient\WatcherClient.cpp" />
+    <ClCompile Include="ActivityManager.cpp" />
+    <ClCompile Include="ActivityModule.cpp" />
+    <ClCompile Include="BagModule.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="GameLogManager.cpp" />
+    <ClCompile Include="WebCommandMgr.cpp" />
+    <ClCompile Include="CopyModule.cpp" />
+    <ClCompile Include="CounterModule.cpp" />
+    <ClCompile Include="DataPool.cpp" />
+    <ClCompile Include="EquipModule.cpp" />
+    <ClCompile Include="FriendModule.cpp" />
+    <ClCompile Include="GameService.cpp" />
+    <ClCompile Include="GameSvrMgr.cpp" />
+    <ClCompile Include="GemModule.cpp" />
+    <ClCompile Include="GlobalDataMgr.cpp" />
+    <ClCompile Include="LoginCodeMgr.cpp" />
+    <ClCompile Include="MailManager.cpp" />
+    <ClCompile Include="Guild.cpp" />
+    <ClCompile Include="GuildManager.cpp" />
+    <ClCompile Include="MailModule.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ModuleBase.cpp" />
+    <ClCompile Include="MountModule.cpp" />
+    <ClCompile Include="PartnerModule.cpp" />
+    <ClCompile Include="PayManager.cpp" />
+    <ClCompile Include="PetModule.cpp" />
+    <ClCompile Include="PlayerManager.cpp" />
+    <ClCompile Include="PlayerObject.cpp" />
+    <ClCompile Include="RankMananger.cpp" />
+    <ClCompile Include="RoleModule.cpp" />
+    <ClCompile Include="SimpleManager.cpp" />
+    <ClCompile Include="SkillModule.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StoreModule.cpp" />
+    <ClCompile Include="TaskModule.cpp" />
+    <ClCompile Include="LogicMsgHandler.cpp" />
+    <ClCompile Include="TeamCopyMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Message\Msg_Account.pb.h" />
+    <ClInclude Include="..\Message\Msg_Base.pb.h" />
+    <ClInclude Include="..\Message\Msg_Role.pb.h" />
+    <ClInclude Include="..\StaticData\StaticData.h" />
+    <ClInclude Include="..\StaticData\ConfigDefine.h" />
+    <ClInclude Include="..\StaticData\StaticStruct.h" />
+    <ClInclude Include="..\StaticData\CppSQLite3.h" />
+    <ClInclude Include="..\Message\Game_Define.pb.h" />
+    <ClInclude Include="..\Message\Msg_Copy.pb.h" />
+    <ClInclude Include="..\Message\Msg_Game.pb.h" />
+    <ClInclude Include="..\Message\Msg_ID.pb.h" />
+    <ClInclude Include="..\Message\Msg_LoginCltData.pb.h" />
+    <ClInclude Include="..\Message\Msg_LoginDBData.pb.h" />
+    <ClInclude Include="..\Message\Msg_RetCode.pb.h" />
+    <ClInclude Include="..\ServerData\ActivityData.h" />
+    <ClInclude Include="..\ServerData\BagData.h" />
+    <ClInclude Include="..\ServerData\CopyData.h" />
+    <ClInclude Include="..\ServerData\CounterData.h" />
+    <ClInclude Include="..\ServerData\EquipData.h" />
+    <ClInclude Include="..\ServerData\FriendData.h" />
+    <ClInclude Include="..\ServerData\GemData.h" />
+    <ClInclude Include="..\ServerData\GlobalData.h" />
+    <ClInclude Include="..\ServerData\GuildData.h" />
+    <ClInclude Include="..\ServerData\MailData.h" />
+    <ClInclude Include="..\ServerData\MountData.h" />
+    <ClInclude Include="..\ServerData\PartnerData.h" />
+    <ClInclude Include="..\ServerData\PetData.h" />
+    <ClInclude Include="..\ServerData\RoleData.h" />
+    <ClInclude Include="..\ServerData\ServerDefine.h" />
+    <ClInclude Include="..\ServerData\ServerStruct.h" />
+    <ClInclude Include="..\ServerData\SkillData.h" />
+    <ClInclude Include="..\ServerData\StoreData.h" />
+    <ClInclude Include="..\ServerData\TaskData.h" />
+    <ClInclude Include="..\WatcherClient\WatcherClient.h" />
+    <ClInclude Include="ActivityManager.h" />
+    <ClInclude Include="ActivityModule.h" />
+    <ClInclude Include="BagModule.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="GameLogManager.h" />
+    <ClInclude Include="WebCommandMgr.h" />
+    <ClInclude Include="CopyModule.h" />
+    <ClInclude Include="CounterModule.h" />
+    <ClInclude Include="DataPool.h" />
+    <ClInclude Include="EquipModule.h" />
+    <ClInclude Include="FriendModule.h" />
+    <ClInclude Include="GameService.h" />
+    <ClInclude Include="GameSvrMgr.h" />
+    <ClInclude Include="GemModule.h" />
+    <ClInclude Include="GlobalDataMgr.h" />
+    <ClInclude Include="LoginCodeMgr.h" />
+    <ClInclude Include="MailManager.h" />
+    <ClInclude Include="Guild.h" />
+    <ClInclude Include="GuildManager.h" />
+    <ClInclude Include="Lua_Script.h" />
+    <ClInclude Include="MailModule.h" />
+    <ClInclude Include="ModuleBase.h" />
+    <ClInclude Include="MountModule.h" />
+    <ClInclude Include="MsgHandlerManager.h" />
+    <ClInclude Include="PartnerModule.h" />
+    <ClInclude Include="PayManager.h" />
+    <ClInclude Include="PetModule.h" />
+    <ClInclude Include="PlayerManager.h" />
+    <ClInclude Include="PlayerObject.h" />
+    <ClInclude Include="RankMananger.h" />
+    <ClInclude Include="RoleModule.h" />
+    <ClInclude Include="SimpleManager.h" />
+    <ClInclude Include="SkillModule.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StoreModule.h" />
+    <ClInclude Include="TaskModule.h" />
+    <ClInclude Include="LogicMsgHandler.h" />
+    <ClInclude Include="TeamCopyMgr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerEngine\ServerEngine.vcxproj">
+      <Project>{639fa6be-9921-4385-9210-bd6cac868d58}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
